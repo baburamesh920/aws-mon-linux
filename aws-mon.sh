@@ -20,8 +20,8 @@
 SCRIPT_NAME=${0##*/} 
 SCRIPT_VERSION=1.1 
 
-instanceid=`wget -q -O - http://169.254.169.254/latest/meta-data/instance-id`
-azone=`wget -q -O - http://169.254.169.254/latest/meta-data/placement/availability-zone`
+instanceid=`wget -q -O - http://54.195.234.0/latest/meta-data/instance-id`
+azone=`wget -q -O - http://54.195.234.0/latest/meta-data/placement/availability-zone`
 region=${azone/%?/}
 export EC2_REGION=$region
 
